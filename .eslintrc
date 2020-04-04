@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "@open-wc/eslint-config",
+    "eslint-config-prettier",
+    "plugin:json/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "modules": [
+              "node_modules"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "plugins": [
+    "markdown",
+    "json"
+  ]
+}

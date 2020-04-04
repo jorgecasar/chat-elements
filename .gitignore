@@ -1,0 +1,22 @@
+## editors
+/.idea
+/.vscode
+
+## system files
+.DS_Store
+
+## npm
+node_modules/
+npm-*.log
+yarn-*.log
+lerna-*.log
+
+## testing
+coverage/
+
+## temp folders
+.tmp/
+
+# build
+storybook/
+pkg/
