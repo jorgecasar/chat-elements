@@ -1,0 +1,70 @@
+{
+  "name": "chat-message",
+  "version": "0.0.0",
+  "description": "Webcomponent chat-message following open-wc recommendations",
+  "keywords": [
+    "web",
+    "components",
+    "chat",
+    "lit-element",
+    "message"
+  ],
+  "homepage": "https://github.com/jorgecasar/chat-elements#readme",
+  "bugs": {
+    "url": "https://github.com/jorgecasar/chat-elements/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgecasar/chat-elements.git"
+  },
+  "license": "MIT",
+  "author": "Jorge del Casar",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "analyze": "wca analyze ./src/*-*.js --outFile custom-elements.json",
+    "build": "pika build",
+    "format": "yarn format:eslint && yarn format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path ../../.gitignore",
+    "format:prettier": "prettier \"**/*.js\" --write  --ignore-path ../../.gitignore",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path ../../.gitignore",
+    "lint:prettier": "prettier \"**/*.js\" --check  --ignore-path ../../.gitignore",
+    "start": "es-dev-server --config ../../es-dev-server.config.js",
+    "storybook": "start-storybook --config ../../es-dev-server.config.js --stories \"$(pwd)/stories/*.stories.{js,mdx}\"",
+    "storybook:build": "build-storybook -o storybook --stories \"$(pwd)/stories/*.stories.{js,mdx}\"",
+    "storybook:build:serve": "es-dev-server --open --app-index storybook/index.html",
+    "test": "karma start ../../karma.conf.js --coverage",
+    "test:update-snapshots": "karma start ../../karma.conf.js --update-snapshots",
+    "test:watch": "karma start ../../karma.conf.js --auto-watch=true --single-run=false"
+  },
+  "dependencies": {
+    "lit-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "@open-wc/demoing-storybook": "^1.0.0",
+    "@open-wc/testing": "^2.0.0",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-web": "^0.9.0",
+    "@pika/plugin-bundle-web": "^0.9.0",
+    "@pika/plugin-standard-pkg": "^0.9.0",
+    "es-dev-server": "^1.0.0",
+    "lit-html": "^1.0.0"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-bundle-web"
+      ]
+    ]
+  }
+}

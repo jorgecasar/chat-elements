@@ -1,0 +1,60 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "chat-message",
+      "path": "./src/chat-message.js",
+      "attributes": [
+        {
+          "name": "user-name",
+          "type": "string"
+        },
+        {
+          "name": "show-user",
+          "type": "boolean"
+        },
+        {
+          "name": "avatar",
+          "type": "string"
+        },
+        {
+          "name": "avatarAlt",
+          "type": "string"
+        },
+        {
+          "name": "me",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "userName",
+          "attribute": "user-name",
+          "type": "string"
+        },
+        {
+          "name": "showUser",
+          "attribute": "show-user",
+          "type": "boolean"
+        },
+        {
+          "name": "avatar",
+          "attribute": "avatar",
+          "type": "string"
+        },
+        {
+          "name": "avatarAlt",
+          "attribute": "avatarAlt",
+          "type": "string"
+        },
+        {
+          "name": "me",
+          "attribute": "me",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}

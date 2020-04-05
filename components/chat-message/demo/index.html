@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      // eslint-disable-next-line import/no-extraneous-dependencies
+      import { html, render } from 'lit-html';
+      import '../src/index.js';
+
+      render(
+        html`
+          <style>
+            chat-message {
+              margin: 0.5rem;
+            }
+          </style>
+          <chat-message user-name="User 1" avatar="https://i.pravatar.cc/32" alt="Random avatar"
+            >Hello World!</chat-message
+          >
+          <chat-message
+            me
+            user-name="User 2"
+            avatar="https://i.pravatar.cc/32"
+            alt="Other random avatar"
+            >With a really, really, really, really, really, really, really, really long
+            message!</chat-message
+          >
+        `,
+        document.querySelector('#demo'),
+      );
+    </script>
+  </body>
+</html>

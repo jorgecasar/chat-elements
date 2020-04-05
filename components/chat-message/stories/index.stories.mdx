@@ -1,0 +1,145 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+import '../src/index.js';
+
+<Meta
+  title="ChatMessage"
+  parameters={{
+    component: "chat-message",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# ChatMessage
+
+A component for chat message
+
+## Features:
+
+- Show an optional avatar
+
+## How to use
+
+### Installation
+
+```bash
+yarn add chat-message
+```
+
+```js
+import 'chat-message/chat-message.js';
+```
+
+<Story name="Basic">
+  {html`<chat-message>Hello World!</chat-message>`}
+</Story>
+
+``` html
+<chat-message>Hello World!</chat-message>
+```
+
+## API
+
+<Props of="chat-message" />
+
+## Variations
+
+### Own message
+
+<Preview withToolbar>
+  <Story name="Own message">
+    {html`<chat-message me>Hello World</chat-message>`}
+  </Story>
+</Preview>
+
+
+### Custom Avatar
+
+<Preview withToolbar>
+  <Story name="Custom Avatar">
+    {html`<chat-message user-name="User 1" avatar="https://i.pravatar.cc/48" alt="Random avatar">Hello World!</chat-message>`}
+  </Story>
+</Preview>
+
+## Style
+
+### Custom properties
+
+<Preview withToolbar>
+  <Story name="Style/Custom properties">
+  {html`
+    <style>
+      .custom-content {
+        background: #111;
+        padding: 1rem;
+      }
+      .custom-content chat-message {
+        --chat-message-color: #EEE;
+        --chat-message-background: #111;
+        --chat-message-border: 1px solid #222;
+        --chat-message-radius: 8px;
+        --chat-message-avatar-size: 2.5rem;
+        --chat-message-avatar-border: 1px solid #333;
+        --chat-message-avatar-radius: 50%;
+        --chat-message-me-color: #FFF;
+        --chat-message-me-background: #222;
+        --chat-message-me-border: 1px solid #333;
+        --chat-message-me-radius: 8px;
+        --chat-message-me-avatar-size: 1.5rem;
+        --chat-message-me-avatar-border: 1px solid #444;
+        --chat-message-me-avatar-radius: 50%;
+        margin-bottom: 1rem;
+      }
+    </style>
+    <div class="custom-content">
+      <chat-message user-name="User 1" avatar="https://i.pravatar.cc/48" alt="Random avatar">Hello World!</chat-message>
+      <chat-message me user-name="User 2" avatar="https://i.pravatar.cc/48" alt="Other random avatar">With a really, really, really, really, really, really, really, really long message!</chat-message>
+    </div>
+  `}
+  </Story>
+</Preview>
+
+### Shadow parts
+
+<Preview withToolbar>
+  <Story name="Style shadow parts">
+  {html`
+    <style>
+      .shadow-parts {
+        padding: 1rem;
+      }
+      .shadow-parts chat-message {
+        margin-bottom: 1rem;
+        align-items: flex-start;
+        --chat-message-background: #FFF;
+      }
+      .shadow-parts chat-message::part(avatar) {
+        z-index: 1;
+        border-radius: 0 0 calc(var(--_avatar-size) / 2) 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+      .shadow-parts chat-message::part(content) {
+        margin: 0 0 0 -2rem;
+        padding: 0.5rem 1rem 0.5rem 2.5rem;
+        border-radius: 0 0 calc(var(--_avatar-size) / 2) 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+      .shadow-parts chat-message::part(content-user) {
+      }
+      .shadow-parts chat-message::part(content-text) {
+      }
+      .shadow-parts chat-message[me]::part(avatar) {
+        border-radius: 0 0 0 calc(var(--_avatar-size) / 2);
+      }
+      .shadow-parts chat-message[me]::part(content) {
+        margin: 0 -2rem 0 0;
+        padding: 0.5rem 2.5rem 0.5rem 1rem;
+        border-radius: 0 0 0 calc(var(--_avatar-size) / 2);
+      }
+    </style>
+    <div class="shadow-parts">
+      <chat-message user-name="User 1" avatar="https://i.pravatar.cc/48" alt="Random avatar">Hello World!</chat-message>
+      <chat-message me user-name="User 2" avatar="https://i.pravatar.cc/48" alt="Other random avatar">With a really, really, really, really, really, really, really, really long message!</chat-message>
+    </dvi>
+  `}
+  </Story>
+</Preview>
