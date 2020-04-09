@@ -1,0 +1,65 @@
+import { Story, Preview, Meta, Props, action, html } from '@open-wc/demoing-storybook';
+import '../src/index.js';
+import { sendIcon } from '../demo/send-icon.svg.js';
+
+<Meta
+  title="ChatInputMessage"
+  parameters={{
+    component: "chat-input-message",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# ChatInputMessage
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add chat-input-message
+```
+
+```js
+import 'chat-input-message/chat-input-message.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <chat-input-message @submit="${action('submit')}"></chat-input-message>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="chat-input-message" />
+
+## Variations
+
+### Custom Button
+
+<Story name="Custom Button">
+  {html`
+    <chat-input-message submit-text="Send">
+      ${sendIcon(html)}
+    </chat-input-message>
+  `}
+</Story>
+
+### Enter Break
+
+<Story name="Enter break">
+  {html`
+    <chat-input-message enter-break></chat-input-message>
+  `}
+</Story>
