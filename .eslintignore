@@ -1,0 +1,5 @@
+node_modules
+types
+_site-dev/
+_site/
+docs/_merged_*
