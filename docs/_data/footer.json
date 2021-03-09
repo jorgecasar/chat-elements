@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Discover",
+    "children": [
+      {
+        "text": "Help and Feedback",
+        "href": "https://github.com/jorgecasar/chat-elements/issues"
+      }
+    ]
+  },
+  {
+    "name": "Follow",
+    "children": [
+      {
+        "text": "GitHub",
+        "href": "https://github.com/jorgecasar/chat-elements"
+      },
+      {
+        "text": "Twitter",
+        "href": "https://twitter.com/jorgecasar"
+      },
+      {
+        "text": "Twitch",
+        "href": "https://twitch.tv/jorgecasar_"
+      }
+    ]
+  },
+  {
+    "name": "Support",
+    "children": [
+      {
+        "text": "Sponsor",
+        "href": "https://www.buymeacoffee.com/jorgecasar"
+      },
+      {
+        "text": "Contribute",
+        "href": "https://github.com/jorgecasar/chat-elements/blob/master/CONTRIBUTING.md"
+      }
+    ]
+  }
+]

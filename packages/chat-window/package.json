@@ -1,0 +1,29 @@
+{
+  "name": "@chat-elements/window",
+  "version": "0.0.0",
+  "license": "MIT",
+  "module": "./index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./define": "./chat-window.js"
+  },
+  "scripts": {
+    "analyze": "wca analyze *-*.js --outFile custom-elements.json",
+    "custom-elements-manifest": "custom-elements-manifest analyze --litelement",
+    "test": "echo no tests"
+  },
+  "dependencies": {
+    "@chat-elements/input-message": "0.0.0",
+    "@chat-elements/message": "0.0.0",
+    "@lion/core": "^0.16.0"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.1.8",
+    "web-component-analyzer": "^1.1.6"
+  },
+  "customElementsManifest": "custom-elements.json",
+  "sideEffects": [
+    "./chat-window.js"
+  ]
+}

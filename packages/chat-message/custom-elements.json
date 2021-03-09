@@ -1,0 +1,168 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "chat-message",
+      "path": "./chat-message.js",
+      "attributes": [
+        {
+          "name": "user-name",
+          "description": "Name of the user",
+          "type": "string"
+        },
+        {
+          "name": "hide-user",
+          "description": "Set to true to hide user name from the message bubble",
+          "type": "boolean"
+        },
+        {
+          "name": "avatar",
+          "description": "User photo URL",
+          "type": "string"
+        },
+        {
+          "name": "avatar-alt",
+          "description": "Alternative text for user photo, if null it will take the user name",
+          "type": "string"
+        },
+        {
+          "name": "me",
+          "description": "Message from first person",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "userName",
+          "attribute": "user-name",
+          "description": "Name of the user",
+          "type": "string"
+        },
+        {
+          "name": "hideUser",
+          "attribute": "hide-user",
+          "description": "Set to true to hide user name from the message bubble",
+          "type": "boolean"
+        },
+        {
+          "name": "avatar",
+          "attribute": "avatar",
+          "description": "User photo URL",
+          "type": "string"
+        },
+        {
+          "name": "avatarAlt",
+          "attribute": "avatar-alt",
+          "description": "Alternative text for user photo, if null it will take the user name",
+          "type": "string"
+        },
+        {
+          "name": "me",
+          "attribute": "me",
+          "description": "Message from first person",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Message"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--chat-message-background",
+          "description": "Chat message background",
+          "default": "\"#eee\""
+        },
+        {
+          "name": "--chat-message-color",
+          "description": "Chat message color",
+          "default": "\"#000\""
+        },
+        {
+          "name": "--chat-message-radius",
+          "description": "Chat message radius",
+          "default": "0"
+        },
+        {
+          "name": "--chat-message-border",
+          "description": "Chat message border",
+          "default": "\"0 solid transparent\""
+        },
+        {
+          "name": "--chat-message-gap",
+          "description": "Chat message gap",
+          "default": "\"0.5rem\""
+        },
+        {
+          "name": "--chat-message-avatar-size",
+          "description": "Chat message avatar size",
+          "default": "\"2rem\""
+        },
+        {
+          "name": "--chat-message-avatar-border",
+          "description": "Chat message avatar border",
+          "default": "\"var(--chat-message-border)\""
+        },
+        {
+          "name": "--chat-message-avatar-radius",
+          "description": "Chat message avatar radius",
+          "default": "\"var(--chat-message-radius)\""
+        },
+        {
+          "name": "--chat-message-me-background",
+          "description": "Chat message me background",
+          "default": "\"var(--chat-message-background)\""
+        },
+        {
+          "name": "--chat-message-me-color",
+          "description": "Chat message me color",
+          "default": "\"var(--chat-message-color)\""
+        },
+        {
+          "name": "--chat-message-me-border",
+          "description": "Chat message me border",
+          "default": "\"var(--chat-message-border)\""
+        },
+        {
+          "name": "--chat-message-me-radius",
+          "description": "Chat message me radius",
+          "default": "\"var(--chat-message-radius)\""
+        },
+        {
+          "name": "--chat-message-me-avatar-size",
+          "description": "Chat message me avatar size",
+          "default": "\"var(--chat-message-avatar-size)\""
+        },
+        {
+          "name": "--chat-message-me-avatar-border",
+          "description": "Chat message me avatar border",
+          "default": "\"var(--chat-message-avatar-border)\""
+        }
+      ],
+      "cssParts": [
+        {
+          "name": "avatar"
+        },
+        {
+          "name": "avatar-image"
+        },
+        {
+          "name": "text"
+        },
+        {
+          "name": "content"
+        },
+        {
+          "name": "user"
+        },
+        {
+          "name": "sr-only"
+        }
+      ]
+    }
+  ]
+}
