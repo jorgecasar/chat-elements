@@ -1,0 +1,46 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "chat-window",
+      "path": "./chat-window.js",
+      "attributes": [
+        {
+          "name": "messages",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "enter-break",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "me-info",
+          "type": "object",
+          "default": "{}"
+        }
+      ],
+      "properties": [
+        {
+          "name": "messages",
+          "attribute": "messages",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "enterBreak",
+          "attribute": "enter-break",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "userMe",
+          "attribute": "me-info",
+          "type": "object",
+          "default": "{}"
+        }
+      ]
+    }
+  ]
+}

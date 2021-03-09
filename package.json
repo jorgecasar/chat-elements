@@ -1,0 +1,54 @@
+{
+  "name": "@chat-elements/root",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "analyze": "yarn workspaces run analyze",
+    "format": "run-p format:*",
+    "format:eclint": "git ls-files | xargs eclint fix",
+    "format:eslint": "npm run lint:eslint -- --fix",
+    "format:prettier": "prettier \"**/*.{mjs,js,json}\" --write",
+    "lint": "run-p lint:*",
+    "lint:eclint": "git ls-files | xargs eclint check",
+    "lint:eslint": "eslint --ext .js .",
+    "lint:prettier": "prettier \"**/*.{mjs,js,json}\" --check",
+    "prepare": "husky install",
+    "start": "rocket start",
+    "custom-elements-manifest": "yarn workspaces run custom-elements-manifest",
+    "test": "yarn workspaces run test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.16.0",
+    "@custom-elements-manifest/analyzer": "^0.1.8",
+    "@mdjs/mdjs-preview": "^0.3.2",
+    "@mdjs/mdjs-story": "^0.1.2",
+    "@open-wc/eslint-config": "^4.2.0",
+    "@rocket/cli": "^0.6.0",
+    "@rocket/launch": "^0.4.0",
+    "api-viewer-element": "^0.4.4",
+    "eclint": "^2.8.1",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^31.0.7",
+    "eslint-plugin-lit": "^1.3.0",
+    "eslint-plugin-lit-a11y": "^1.0.1",
+    "eslint-plugin-wc": "^1.3.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "lit-html": "^1.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "prettier-plugin-package": "^1.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "playground-elements": "^0.6.2"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "chat-input-message",
+      "path": "./chat-input-message.js",
+      "attributes": [
+        {
+          "name": "enter-break",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "enterBreak",
+          "attribute": "enter-break",
+          "type": "boolean"
+        },
+        {
+          "name": "submitDisabled"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "submit"
+        }
+      ]
+    }
+  ]
+}
